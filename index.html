@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PDF to HTML Tables (with OCR)</title>
+
+  <!-- Our stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- PDF.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <!-- Tesseract.js from CDN for OCR -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <h1>PDF to HTML Tables (with OCR)</h1>
+
+  <div class="controls">
+    <div class="controls-top">
+      <div>
+        <label for="pdfFile">Choose PDF:</label>
+        <input type="file" id="pdfFile" accept="application/pdf" />
+      </div>
+      <div class="controls-buttons">
+        <button id="generateBtn">Generate Tables</button>
+        <button id="openNewPageBtn" disabled>Open in New Page</button>
+      </div>
+    </div>
+    <div id="status">Select a PDF and click "Generate Tables".</div>
+  </div>
+
+  <h2>Detected Tables</h2>
+  <div id="tablesContainer"></div>
+
+  <!-- Our main script (must be after HTML and CDN scripts) -->
+  <script src="script.js"></script>
+</body>
+</html>
